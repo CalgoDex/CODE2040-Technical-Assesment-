@@ -12,7 +12,7 @@ import dateutil.parser
 import datetime
 
 #dictionary of keys, token and github
-data = { "token": "516d682c6160ff88eac63c4512b616d3",
+data = { "token": "PUT YOUR TOKEN HERE",
         "github": "https://github.com/CalgoDex/CODE2040-Technical-Assesment-"}
         
 r = requests.post("http://challenge.code2040.org/api/register",data)
