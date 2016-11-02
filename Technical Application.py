@@ -17,6 +17,7 @@ data = { "token": "516d682c6160ff88eac63c4512b616d3",
         
 r = requests.post("http://challenge.code2040.org/api/register",data)
 
+#Checks status of response
 print(r.status_code)
 #******************************************************************************
 #Q1 of the technical application
@@ -34,7 +35,7 @@ rev_stuff = {'token': '516d682c6160ff88eac63c4512b616d3', 'string' : reverse}
 posting = requests.post("http://challenge.code2040.org/api/reverse/validate",
                         rev_stuff)
                         
-#prints just to make sure that correct response was posted                                 
+#checks status of response                                 
 print(posting.status_code)
 #******************************************************************************
 #Q2 of the technical application
@@ -61,7 +62,7 @@ for elem in new_collections['haystack']:
 dict = {'token': '516d682c6160ff88eac63c4512b616d3', 'needle': pos }        
 response = requests.post('http://challenge.code2040.org/api/haystack/validate',
                          dict)
-                         
+#Checks status of response                         
 print(response.status_code)
 #******************************************************************************
 #Q3 of the technical application
@@ -91,7 +92,8 @@ not_prefix['token'] = '516d682c6160ff88eac63c4512b616d3'
 #posts response
 response = requests.post("http://challenge.code2040.org/api/prefix/validate",
                          json = not_prefix)
-                         
+
+#Checks status of response                         
 print(response.status_code)
 #******************************************************************************
 #Q4 of the techinical application
@@ -134,7 +136,7 @@ datestamp = {"token":"516d682c6160ff88eac63c4512b616d3",
 response = requests.post("http://challenge.code2040.org/api/dating/validate",
                          datestamp)
 
-#checks to see if successful
+#checks status of response
 print(response.status_code)
 
 
